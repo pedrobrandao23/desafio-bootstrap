@@ -1,10 +1,26 @@
 O desafio é criar uma página de Backoffice, aqueles sistemas onde controlamos produtos e estoque, do marketplace "Pipoco do Trovão". 
 
-E como primeiro passo deve-se criar uma tela de login da nossa aplicação.
+Desafio 1:
+
+Deve-se criar uma tela de login da nossa aplicação.
 
 REQUISITOS MÍNIMOS
-A página deve ter no mínimo 1 de cada item:
+
 ● Botão Primário (Entrar)
 ● Botão Secundário (Resetar)
 ● A tela deve estar centralizada e responsiva utilizando os conceitos do Bootstrap.
 ● Alerta informando que já foi logado.
+
+Desafio 2:
+
+Deve-se criar uma página de dashboard do nosso Backoffice do marketplace "Pipoco do Trovão". Dessa forma, vamos dar corpo ao nosso projeto. 
+
+REQUISITOS MÍNIMOS 
+
+● Botão para abrir o modal de cadastro de produtos (Cadastrar) 
+● Tabela com título do produto, preço e quantidade  
+● Botão de excluir em cada linha da tabela 
+● Modal de produtos 
+● Alerta informando de cadastro ou exclusão de produtos 
+● A Pagina deve ser estática(Sem Javascript). 
+● Navbar para alteração de telas no backoffice contendo os seguintes links: Home, Gerenciamento de estoque, Rastreio de Entregas, Logout.
