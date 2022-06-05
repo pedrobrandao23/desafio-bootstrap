@@ -34,13 +34,17 @@
                     </ul>
                     <ul class="navbar-nav me-3">
                         <li class="nav-item">
-                            <a class="nav-link disabled">Logout</a>
+                            <a class="nav-link ms-5" href="index.html">Logout</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div id="cadastroAlertPlaceholder"></div>
+    <div id="excluirAlertPlaceholder"></div>
+
     <div class="container-fluid">
         <div class="row d-flex">
             <div id="col1" class="col-2 d-flex flex-column align-items-center pt-3 pb-5 bg-secondary bg-opacity-10">
@@ -48,8 +52,7 @@
                 <img class="thumbnail img-responsive" style="max-width:20%"
                     src="https://cdn-icons-png.flaticon.com/512/1/1247.png" />
                 <h6 class="h6 mt-3" style="text-align: center;">Lorem Ipsum Dolor</h6>
-                <button type="button" id="btncol1" class="btn btn-success mt-auto p-2"
-                    style="min-width: 100%;">Cadastrar</button>
+                <button type="button" id="btncol1" class="btn btn-warning mt-auto p-2" data-bs-toggle="modal" data-bs-target="#cadastroModal" style="min-width: 100%;">Cadastrar</button>
             </div>
             <div class="col">
                 <table class="table table-striped table-hover">
@@ -57,7 +60,7 @@
                         <tr>
                             <th scope="col">id</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">Preço</th>
+                            <th scope="col">Preço (R$)</th>
                             <th scope="col">Quantidade</th>
                             <th scope="col"></th>
                         </tr>
@@ -68,64 +71,84 @@
                             <td>Produto1</td>
                             <td>35.99</td>
                             <td>25</td>
-                            <td id="buttonscolumn"><button type="button"
-                                    class="btn btn-secondary px-4">Ver</button><button type="button"
-                                    class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" id="excluirAlert" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Produto2</td>
                             <td>40.50</td>
                             <td>12</td>
-                            <div id="buttons" class="col-12">
-                                <td id="buttonscolumn"><button type="button"
-                                        class="btn btn-secondary px-4">Ver</button><button type="button"
-                                        class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>Produto3</td>
                             <td>25.80</td>
                             <td>316</td>
-                            <td id="buttonscolumn"><button type="button"
-                                    class="btn btn-secondary px-4">Ver</button><button type="button"
-                                    class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>Produto4</td>
                             <td>12.13</td>
                             <td>178</td>
-                            <td id="buttonscolumn"><button type="button"
-                                    class="btn btn-secondary px-4">Ver</button><button type="button"
-                                    class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
                             <td>Produto5</td>
                             <td>2.35</td>
                             <td>46</td>
-                            <td id="buttonscolumn"><button type="button"
-                                    class="btn btn-secondary px-4">Ver</button><button type="button"
-                                    class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                         <tr>
                             <th scope="row">6</th>
                             <td>Produto6</td>
                             <td>250.20</td>
                             <td>2</td>
-                            <td id="buttonscolumn"><button type="button"
-                                    class="btn btn-secondary px-4">Ver</button><button type="button"
-                                    class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                         <tr>
                             <th scope="row">7</th>
                             <td>Produto7</td>
                             <td>139.90</td>
                             <td>99</td>
-                            <td id="buttonscolumn"><button type="button"
-                                    class="btn btn-secondary px-4">Ver</button><button type="button"
-                                    class="btn btn-danger">Excluir</button></td>
+                            <div id="buttons">
+                            <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
+                                <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                            </div>
                         </tr>
                     </tbody>
                 </table>
@@ -133,6 +156,62 @@
         </div>
 
     </div>
+
+<!-- ------------------------------------------------------------------------------------------------------- -->
+    <!-- modal para cadastrar produto -->
+    <div class="modal" tabindex="-1" id="cadastroModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cadastrar novo produto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3">                    
+                    <div class="col-12">
+                      <label for="inputNome" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="inputNome">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputQuant" class="form-label">Quantidade</label>
+                      <input type="number" min="0" value="0" class="form-control" id="inputQuant">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputValue" class="form-label">Valor Líquido</label>
+                      <input type="number" value="0" class="form-control" id="inputValue">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputDescription" class="form-label">Descrição</label>
+                        <input type="textarea" class="form-control" id="inputDescription">
+                      </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" id="cadastroAlert" class="btn btn-primary">Salvar alterações</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+      <!-- modal para ver produto -->
+      <div class="modal fade" id="verModal" tabindex="-1" aria-labelledby="varModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <h4>Produto</h4>
+              <img class="w-25 my-5" src="https://cdn-icons-png.flaticon.com/512/98/98667.png" alt="Imagem do produto">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequuntur esse omnis a amet. Expedita.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
