@@ -1,0 +1,31 @@
+.nav-link.disabled {
+    margin-left: 48px;
+}
+
+#buttonscolumn{
+    
+    display: flex;
+    /* justify-content: space-around; */
+    column-gap: 50px;
+}
+
+@media (max-width: 800px) { 
+    #dash {
+        display: none;
+    };
+
+}
+
+@media (max-width: 500px) {
+    #col1 {
+        width: max-content;
+    }
+    #buttonscolumn{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    #buttonscolumn button{
+        margin: 2px auto;
+    }
+}

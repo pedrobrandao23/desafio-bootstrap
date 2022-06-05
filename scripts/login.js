@@ -14,7 +14,7 @@ const alert = (message, type) => {
 
 const alertTrigger = document.getElementById('liveAlertBtn')
 if (alertTrigger) {
-  alertTrigger.addEventListener('mousedown', () => {
-    alert('Você já foi logado', 'success')
+  alertTrigger.addEventListener('click', () => {
+    alert('Parabéns, você foi logado', 'success')
   })
 }
