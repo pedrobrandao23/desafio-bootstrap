@@ -74,7 +74,7 @@
                             <div id="buttons">
                             <td id="buttonscolumn" class="d-flex justify-content-end pe-5">
                                 <button type="button" class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#verModal">Ver</button>
-                                <button type="button" id="excluirAlert" class="btn btn-danger">Excluir</button>
+                                <button type="button" id="excluirAlertButton" class="btn btn-danger">Excluir</button>
                             </td>
                             </div>
                         </tr>
@@ -178,7 +178,7 @@
                     </div>
                     <div class="col-md-6">
                       <label for="inputValue" class="form-label">Valor Líquido</label>
-                      <input type="number" value="0" class="form-control" id="inputValue">
+                      <input type="text" value="0" class="form-control" id="inputValue">
                     </div>
                     <div class="col-12">
                         <label for="inputDescription" class="form-label">Descrição</label>
@@ -187,8 +187,8 @@
                   </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
-              <button type="button" id="cadastroAlert" class="btn btn-primary">Salvar alterações</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" id="cadastroAlert" class="btn btn-dark" data-bs-dismiss="modal">Salvar alterações</button>
             </div>
           </div>
         </div>
@@ -207,7 +207,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequuntur esse omnis a amet. Expedita.</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
             </div>
           </div>
         </div>
@@ -216,7 +216,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-    <script src="./scripts/login.js"></script>
+    <script src="./scripts/dashboard.js"></script>
 </body>
 
 </html>
