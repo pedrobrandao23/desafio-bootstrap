@@ -1,48 +1,38 @@
 // alert de exclusão de produto
 
-const alertPlaceholder = document.getElementById('excluirAlertPlaceholder')
+const excluirAlertTrigger = document.getElementById('excluirAlertButton')
 
-const alert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
+console.log(excluirAlertTrigger);
 
-  alertPlaceholder.append(wrapper)
-}
-
-const alertTrigger = document.getElementById('excluirAlertButton')
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', () => {
-    alert('Produto excluído com sucesso!', 'success')
-  })
+excluirAlertTrigger.onclick = ()=>{
+  Toastify({
+    text: "Produto excluído com sucesso!",
+    duration: 5000,
+    close: false,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "#96c93d",
+    }
+  }).showToast()
 }
 
 //--------------------------------------------------------------------------------
 // Alert de salvar alterações no produto
 
-const cadastroAlertPlaceholder = document.getElementById('cadastroAlertPlaceholder')
+const cadastroAlertTrigger = document.getElementById('cadastroAlert');
 
-const excludeAlert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
-
-  cadastroAlertPlaceholder.append(wrapper)
-}
-
-const modal = document.getElementById('verModal')
-const cadastroAlertTrigger = document.getElementById('cadastroAlert')
-if (cadastroAlertTrigger) {
-    cadastroAlertTrigger.addEventListener('click', () => {
-    
-    alert('Produto cadastrado com sucesso!', 'success')
-  })
-}
+cadastroAlertTrigger.onclick = () =>{
+  Toastify({
+    text: "Produto cadastrado!",
+    duration: 3000,
+    close: false,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "#96c93d",
+    }
+  }).showToast()
+};
