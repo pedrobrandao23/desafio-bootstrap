@@ -10,6 +10,8 @@ function alertTrigger() {
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "#96c93d",
+      padding: "10px",
+      color: "white"
     },
   }).showToast();
 }
@@ -29,6 +31,8 @@ cadastroAlertTrigger.onclick = () => {
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "#96c93d",
+      padding: "10px",
+      color: "white"
     },
   }).showToast();
 };
