@@ -1,10 +1,6 @@
 // alert de exclusão de produto
 
-const excluirAlertTrigger = document.getElementById('excluirAlertButton')
-
-console.log(excluirAlertTrigger);
-
-excluirAlertTrigger.onclick = ()=>{
+function alertTrigger() {
   Toastify({
     text: "Produto excluído com sucesso!",
     duration: 5000,
@@ -14,16 +10,16 @@ excluirAlertTrigger.onclick = ()=>{
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "#96c93d",
-    }
-  }).showToast()
+    },
+  }).showToast();
 }
 
 //--------------------------------------------------------------------------------
 // Alert de salvar alterações no produto
 
-const cadastroAlertTrigger = document.getElementById('cadastroAlert');
+const cadastroAlertTrigger = document.getElementById("cadastroAlert");
 
-cadastroAlertTrigger.onclick = () =>{
+cadastroAlertTrigger.onclick = () => {
   Toastify({
     text: "Produto cadastrado!",
     duration: 3000,
@@ -33,6 +29,6 @@ cadastroAlertTrigger.onclick = () =>{
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "#96c93d",
-    }
-  }).showToast()
+    },
+  }).showToast();
 };
